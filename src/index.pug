@@ -1,0 +1,20 @@
+extends templates/template
+
+block title
+	title Hospital
+block append style
+block content
+	main.page
+		include modules/header-module
+		include blocks/banner
+		include blocks/advantages
+		include blocks/about
+		include blocks/our-doctor
+		include blocks/testimonials
+		include blocks/appointment-form
+		include blocks/callback
+	include blocks/footer
+	
+block append script
+	script(src='js/store-scroll.js')
+	script(src='js/scroll-anchors.js')

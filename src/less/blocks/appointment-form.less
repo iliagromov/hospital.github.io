@@ -1,0 +1,83 @@
+.appointment-form{
+    position: relative;
+    background-image: url('../assets/img/img-bg-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    // min-height: 600px;
+    
+    padding: 50px 0;
+    opacity: 0;
+    transition: all ease-out .5s;
+    .page__text{
+        text-align: center;
+    }
+    &-block{
+        position: relative;
+        .page__title-h2{
+            .ssm(line-height, 40px);
+        }
+        .page__form{
+            .row-flex();
+            padding-top: 45px;
+            .size(10.5);
+            .size-md(12);
+            .sm(margin, 0 auto);
+            .xs(margin, 0 auto);
+            //Fixme подумать как избежать дублирования
+            .page__input{
+                .col();
+                .size(6);
+                .size-xs(12);
+                height: 43px;
+                border-radius: 1px;
+                border: 1px solid @color_gray-f5;
+                margin-bottom: 20px;
+                &:nth-child(3){
+                    .size(7); 
+                    .size-xs(12); 
+                }
+                &:nth-child(4){
+                    .size(5);  
+                    .size-xs(12);
+                }
+            }
+            .page__textarea{
+                .col();
+                .size(12);
+                .size-xs(12);
+                border: 1px solid @color_gray-f5;
+                margin-bottom: 20px;
+            }
+            .page__btn{
+                .col();
+                .size(5);
+                .size-sm(8);
+                .size-ssm(12);
+                margin: 0 auto;
+            }
+        }
+    }
+    &_opacity{
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+
+    }
+    &.animated{
+        opacity: 1;
+        .page__title-h2,
+        .page__text{
+            .animated({
+                .fadeInDown();
+            });
+        }
+        .page__form{
+            .animated({
+                .fadeInLeft();
+                .delay(.2s);
+            });
+        }
+    }
+}

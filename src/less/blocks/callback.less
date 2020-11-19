@@ -1,0 +1,47 @@
+.callback{
+    background-color: @color_gray-4;
+    padding: 20px 0 50px;
+    opacity: 0;
+  
+    .page__title-h2{
+        font-family: @fontRegular;
+        font-size: 22px;
+        color: @color_white;
+        text-transform: none;
+        padding-bottom: 20px;
+    }
+    .page__form{
+        .row-flex();
+        justify-content: center;
+        .page__input{
+            .size(6);
+            .size-ssm(12);
+            .ssm-block({
+                margin-bottom: 20px;
+            });
+            height: 53px;
+            border: 1px solid @color_white;
+        }
+        .page__btn{
+            .size(2);
+            .size-ssm(12);
+            border-radius: 0;
+            line-height: 50px;
+            text-transform: uppercase;
+        }
+    }
+    &.animated{
+        opacity: 1;
+        .page__title-h2{
+            .animated({
+                .fadeInDown();
+            });
+        }
+        .page__form{
+            .animated({
+                .fadeIn();
+                .delay(.2s);
+            });
+        }
+    }
+}

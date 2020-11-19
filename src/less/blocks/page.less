@@ -1,0 +1,107 @@
+.page{
+    position: relative;
+    background: @color_white;
+    z-index: 1;
+    &__title{
+
+        &_over{
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: 60px;
+            color: @color_gray-4;
+            font-family: @fontSemibold;
+        }
+        &-h1{
+            font-size: 50px;
+            letter-spacing: 3px;
+            line-height: 60px;
+            color: @color_blue-5;
+            font-family: '@{Raleway}-Bold';
+        }
+        &-h2{
+            font-size: 25px;
+            letter-spacing: 1px;
+            line-height: 60px;
+            color: @color_blue-5;
+            font-family: '@{Raleway}-Bold';
+            text-transform: uppercase;
+            text-align: center;
+            &_semibold{
+                font-family: '@{Raleway}-Semibold';
+                font-size: 24px;
+                letter-spacing: 1px;
+                line-height: 60px;
+                color: @color_gray-3;
+                text-transform: uppercase;
+            }
+        }
+        &-h3{
+            font-size: 20px;
+            letter-spacing: 1px;
+            line-height: 60px;
+            color: @color_white;
+            font-family: '@{Raleway}-Bold';
+            &_medium{
+                font-family: '@{Raleway}-Medium';  
+                font-size: 18px;
+                letter-spacing: 1px;
+                line-height: 24px;
+                color: @color_blue-5;
+            }
+        }
+    }
+    &__text{
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        color: @color_gray-4;
+        font-weight: 400;
+    }
+    &__btn{
+
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        color: @color_white;
+        font-family: '@{Raleway}-Bold';
+        background-color: @color_red-f;
+        border: 2px solid @color_red-f;
+        border-radius: 2px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 60px;
+        transition: all ease-out 0.5s;
+        
+        
+        &:hover{
+            color: @color_red-f;
+            background-color: @color_white;
+        }
+        &_green{
+            background-color: @color_green-7;
+            border: 2px solid @color_green-7;
+            &:hover{
+                color: @color_green-7;
+                background-color: @color_white;
+            }
+        }
+    }
+    &__ul{
+        &-li{
+            font-family: @fontItalic;
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 30px;
+            color: @color_gray-5;
+        }
+    }
+    &__textarea{
+        min-height: 100px;
+        resize: none;
+    }
+    &_color{
+        &-blue-5{
+            color: @color_blue-5;
+        }
+    }
+}

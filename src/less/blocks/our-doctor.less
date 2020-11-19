@@ -1,0 +1,57 @@
+.our-doctor{
+    background-color: @color_gray-f5;
+    padding: 50px 0;
+    opacity: 0;
+    .page__text{
+        text-align: center;
+    }
+    &-items{
+        .row-flex();
+        .sm-block({
+            justify-content:center;
+        });
+        &__item{
+            .col();
+            .size(4);
+            .size-sm(6);
+            .size-xs(12);
+            display: flex;
+            align-items: flex-end;
+            padding: 50px 0;
+            .sm-block({
+                flex-direction: column;
+                align-items: center;
+            });
+            .page__img{
+                display: flex;
+                align-items: center;
+                background: @color_white;
+                width: 146px;
+                height: 146px;
+                border-radius: 100%;
+                overflow: hidden;
+               
+            }
+            &-text{
+                margin-bottom: -20px;
+                .page__text{
+                    text-align: left;
+                }
+            }
+        }
+    }
+    &.animated{
+        opacity: 1;
+        .page__title-h2,
+        .page__text{
+            .animated({
+                .fadeInDown();
+            });
+        }
+        .our-doctor-items{
+            .animated({
+                .fadeIn();
+            });
+        }
+    }
+}
